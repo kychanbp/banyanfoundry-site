@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Invoice reminders · Banyan Foundry</title>
+<meta name="description" content="Polite, automatic reminders for overdue B2B invoices, sent from your own email and WhatsApp. Now looking for pilot businesses in Malaysia.">
+<meta property="og:title" content="Invoice reminders by Banyan Foundry">
+<meta property="og:description" content="Get paid sooner without chasing customers by hand. Pilots open in Malaysia.">
+<meta property="og:url" content="https://banyanfoundry.com/invoice-reminders">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Banyan Foundry home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 10.5C9 5.5 23 5.5 28 10.5" fill="none" stroke="var(--copper)" stroke-width="2.6" stroke-linecap="round"/><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M8 12v8"/><path d="M12.6 12v13"/><path d="M16 12v16"/><path d="M19.4 12v11"/><path d="M24 12v6"/></g></svg>
+      Banyan Foundry
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="invoice-reminders.html" aria-current="page">Invoice reminders</a>
+      <a href="index.html#about">About</a>
+      <a href="#pilot">Talk to us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap split">
+      <div style="display:grid;gap:1.5rem">
+        <span class="eyebrow">Idea 01 · Pilots open in Malaysia</span>
+        <h1>Get paid on time without <em>chasing customers</em> by hand.</h1>
+        <p class="lede">Our tool sends polite reminders for your overdue B2B invoices. It uses your own email and WhatsApp number, it records each promise to pay, and it tells you when a person must step in.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#pilot">Join the pilot</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mock" role="img" aria-label="Example of an automatic reminder conversation about an overdue invoice">
+          <div class="mock-top">
+            <strong>Example Trading Sdn Bhd</strong>
+            <span class="mono muted">via your WhatsApp</span>
+          </div>
+          <dl class="inv">
+            <div><dt>Invoice</dt><dd>INV-0412</dd></div>
+            <div><dt>Amount</dt><dd>RM 8,450.00</dd></div>
+            <div><dt>Status</dt><dd class="over">9 days late</dd></div>
+          </dl>
+          <div class="thread">
+            <span class="when">3 days before due</span>
+            <div class="msg out">Hi Mr Lim, a friendly note that invoice INV-0412 for RM 8,450.00 is due on 14 Nov. You can pay here: pay.yourcompany.my/0412. Thank you!<small>Accounts team · automated reminder</small></div>
+            <span class="when">9 days late</span>
+            <div class="msg out">Hi Mr Lim, invoice INV-0412 (RM 8,450.00) is now 9 days past due. Can you tell us when we can expect payment?<small>Accounts team · automated reminder</small></div>
+            <div class="msg in">Sorry, boss is travelling. Can pay next Friday?</div>
+            <div class="msg out">Noted, thank you. We have recorded payment for Fri, 28 Nov. We will send the pay link again that morning.<small>Accounts team · automated reminder</small></div>
+            <div class="flag"><b>Logged</b> Promise to pay: Fri 28 Nov. If no payment, the owner gets an alert.</div>
+          </div>
+        </div>
+        <p class="mock-note">Example only. Names and numbers are not real.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="band" id="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The problem</span>
+        <h2>Late payment is normal, and owners chase it by hand</h2>
+        <p class="muted">In most small firms, the owner or the bookkeeper sends reminders one by one on WhatsApp, between other work. Many reminders are late or never sent.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="big">64 days</span><p>Average time Malaysian SMEs wait to get paid.</p><span class="src">Experian Malaysia, Trade Bureau report, May 2025</span></div>
+        <div class="fact"><span class="big">≈ 1 in 3</span><p>B2B invoices in Asia that are overdue.</p><span class="src">Atradius, Payment Practices Barometer Asia, 2026</span></div>
+        <div class="fact"><span class="big">80%+</span><p>Suppliers in Asia who report late payment from customers.</p><span class="src">Atradius, Payment Practices Barometer Asia, 2026</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap split" style="align-items:start">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">How it works</span>
+        <h2>A fixed reminder schedule, with a person for the hard cases</h2>
+        <p class="muted">You choose the tone and the schedule. The tool follows it for every open invoice. When a customer disputes an invoice or asks for a payment plan, the tool stops and passes the case to you.</p>
+      </div>
+      <ol class="ladder">
+        <li><span class="day">Day −3</span><div><h3>Friendly heads-up</h3><p class="muted">A short note with the amount, the due date and a pay link.</p></div></li>
+        <li><span class="day">Day +1</span><div><h3>First reminder</h3><p class="muted">A polite message the day after the due date.</p></div></li>
+        <li><span class="day">Day +7</span><div><h3>Ask for a date</h3><p class="muted">The tool asks when payment will come and records the answer.</p></div></li>
+        <li><span class="day">Day +14</span><div><h3>Firmer reminder</h3><p class="muted">A clear message that refers to your payment terms.</p></div></li>
+        <li><span class="day">Day +21</span><div><h3>Hand over to you</h3><p class="muted">You get a short summary of the full history, so one call is enough.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap cols-2">
+      <div>
+        <span class="eyebrow">What is different</span>
+        <h3>It runs in your name</h3>
+        <ul class="checks">
+          <li>Messages go from your own email address and WhatsApp number.</li>
+          <li>Customers pay you directly, into your own account.</li>
+          <li>Every message says that it is an automated reminder.</li>
+          <li>Messages go out on weekdays, during business hours only.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Who it is for</span>
+        <h3>Owner-run B2B firms in Malaysia</h3>
+        <ul class="checks">
+          <li>Service firms and distributors that sell on credit terms.</li>
+          <li>About 50 to 500 customers who pay by invoice.</li>
+          <li>Teams that use Xero, AutoCount or a spreadsheet for invoices.</li>
+          <li>No full-time credit controller.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is this a debt collection agency?</summary>
+          <p>No. We supply software. You stay the sender of every message, and your customers pay you directly. We do not take a percentage of the money that you collect.</p>
+        </details>
+        <details>
+          <summary>Will it damage my customer relationships?</summary>
+          <p>You approve the wording and the schedule before anything goes out. The tone stays polite. Disputes and payment plans go to you, not to the tool.</p>
+        </details>
+        <details>
+          <summary>How do you get my invoice data?</summary>
+          <p>During the pilot, we can start from a simple export (Excel or CSV) from your accounting software. Direct links to Xero and AutoCount are on our plan.</p>
+        </details>
+        <details>
+          <summary>What happens to my customers' data?</summary>
+          <p>We use it only to send your reminders, and we do not sell or share it. We follow Malaysia's Personal Data Protection Act.</p>
+        </details>
+        <details>
+          <summary>What does the pilot cost?</summary>
+          <p>We agree simple pilot terms with you before we start. There is never a fee based on a percentage of collected cash.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="pilot">
+    <div class="wrap contact">
+      <span class="eyebrow">Pilot</span>
+      <h2>We are looking for our first pilot businesses in Malaysia.</h2>
+      <p class="lede">Send us a short email with your business type and about how many invoices you send each month. We will reply within one working day.</p>
+      <a class="email" href="mailto:john@banyanfoundry.com?subject=Invoice%20reminders%20pilot">john@banyanfoundry.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Banyan Foundry</span>
+    <span><a href="index.html">Studio home</a> · <a href="mailto:john@banyanfoundry.com">john@banyanfoundry.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
