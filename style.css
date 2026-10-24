@@ -200,3 +200,44 @@ a.idea:hover h3 { color: var(--copper); }
   .btn, .nav a, a.idea h3 { transition: color 0.15s, background-color 0.15s, border-color 0.15s; }
 }
 .split h1 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); }
+
+/* ---------- Phone layout ---------- */
+.mobile-cta { display: none; }
+[id] { scroll-margin-top: 1rem; }
+.btn { min-height: 48px; justify-content: center; }
+@media (max-width: 640px) {
+  body { font-size: 1rem; padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+  section { padding-block: 3rem; }
+  .hero .wrap { padding-block: 2.25rem 2.5rem; gap: 1.25rem; }
+  .site-head .wrap { padding-block: 0.75rem; row-gap: 0.25rem; }
+  .nav { gap: 0.25rem 1.1rem; }
+  .nav a { display: inline-block; padding-block: 0.6rem; }
+  .actions .btn { flex: 1 1 10rem; }
+  .section-head { margin-bottom: 1.75rem; }
+  .steps { gap: 1.5rem; }
+  .facts { gap: 1.5rem; }
+  .site-foot .wrap { flex-direction: column; }
+  .site-foot a { display: inline-block; padding-block: 0.4rem; }
+  .mock { border-radius: 12px; }
+  .inv { gap: 0.2rem 0.6rem; padding: 0.8rem 0.9rem; }
+  .inv dd { font-size: 0.82rem; white-space: nowrap; }
+  .thread { padding: 0.9rem; }
+  .msg { max-width: 92%; font-size: 0.9rem; }
+  .ladder li { padding-bottom: 1.25rem; }
+  .faq summary { padding-block: 0.3rem; }
+
+  /* Fixed contact bar: one tap to reach us from any point on the page */
+  .mobile-cta {
+    display: flex; gap: 0.6rem;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    padding-top: 0.7rem;
+    padding-bottom: calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    background: var(--paper); border-top: 1px solid var(--line);
+    box-shadow: 0 -8px 24px -16px rgba(20, 37, 32, 0.4);
+  }
+  .mobile-cta .btn { flex: 1; }
+}
+.bio { display: grid; gap: 0.9rem; margin-top: 1.2rem; }
+@media (max-width: 640px) { .idea .pill { justify-self: start; } }
