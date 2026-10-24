@@ -241,3 +241,7 @@ a.idea:hover h3 { color: var(--copper); }
 }
 .bio { display: grid; gap: 0.9rem; margin-top: 1.2rem; }
 @media (max-width: 640px) { .idea .pill { justify-self: start; } }
+.reach { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
+.wa-ico { width: 1.15em; height: 1.15em; flex: none; }
+.small { font-size: 0.92rem; }
+.cta-band .muted { color: color-mix(in srgb, var(--paper) 70%, transparent); }
