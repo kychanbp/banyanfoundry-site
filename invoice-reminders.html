@@ -5,9 +5,9 @@
 <script>if (location.protocol === "http:" && location.hostname.endsWith("banyanfoundry.com")) location.replace("https://banyanfoundry.com" + location.pathname + location.search + location.hash);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Invoice reminders · Banyan Foundry</title>
-<meta name="description" content="Polite, automatic reminders for overdue B2B invoices, sent from your own email and WhatsApp. Now looking for pilot businesses in Malaysia.">
+<meta name="description" content="Reminders for overdue B2B invoices that also handle the replies: the tool records each promise to pay, pauses on a dispute and stops when the invoice is paid. Sent from your own email and WhatsApp. Pilots open in Malaysia.">
 <meta property="og:title" content="Invoice reminders by Banyan Foundry">
-<meta property="og:description" content="Get paid sooner without chasing customers by hand. Pilots open in Malaysia.">
+<meta property="og:description" content="Sending a reminder is easy. This tool also handles the reply, the dispute and the promise to pay. Pilots open in Malaysia.">
 <meta property="og:url" content="https://banyanfoundry.com/invoice-reminders">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -26,6 +26,7 @@
     </a>
     <nav class="nav" aria-label="Main">
       <a href="invoice-reminders.html" aria-current="page">Invoice reminders</a>
+      <a href="#replies">Replies</a>
       <a href="#gains">Your gains</a>
       <a href="index.html#about">About</a>
       <a href="#pilot">Talk to us</a>
@@ -38,11 +39,11 @@
     <div class="wrap split">
       <div style="display:grid;gap:1.5rem">
         <span class="eyebrow">Idea 01 · Pilots open in Malaysia</span>
-        <h1>Get paid on time without <em>chasing customers</em> by hand.</h1>
-        <p class="lede">Our tool sends polite reminders for your overdue B2B invoices. It uses your own email and WhatsApp number, it records each promise to pay, and it tells you when a person must step in.</p>
+        <h1>Sending a reminder is easy. <em>We handle the reply.</em></h1>
+        <p class="lede">Our tool sends reminders for your overdue B2B invoices from your own email and WhatsApp number. Then it reads every reply. It records each promise to pay, pauses when a customer disputes an invoice, and stops when the invoice is paid.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#pilot">Join the pilot</a>
-          <a class="btn btn-ghost" href="#gains">See what you gain</a>
+          <a class="btn btn-ghost" href="#replies">See how it handles replies</a>
         </div>
       </div>
 
@@ -64,7 +65,7 @@
             <div class="msg out">Hi Mr Lim, invoice INV-0412 (RM 8,450.00) is now 9 days past due. Can you tell us when we can expect payment?<small>Accounts team · automated reminder</small></div>
             <div class="msg in">Sorry, boss is travelling. Can pay next Friday?</div>
             <div class="msg out">Noted, thank you. We have recorded payment for Fri, 28 Nov. We will send the pay link again that morning.<small>Accounts team · automated reminder</small></div>
-            <div class="flag"><b>Logged</b> Promise to pay: Fri 28 Nov. If no payment, the owner gets an alert.</div>
+            <div class="flag"><b>Logged</b> Promise to pay: Fri 28 Nov. Reminders wait until then. If no payment comes, you get an alert.</div>
           </div>
         </div>
         <p class="mock-note">Example only. Names and numbers are not real.</p>
@@ -77,7 +78,7 @@
       <div class="section-head">
         <span class="eyebrow">The problem</span>
         <h2>Late payment is normal, and owners chase it by hand</h2>
-        <p class="muted">In most small firms, the owner or the bookkeeper sends reminders one by one on WhatsApp, between other work. Many reminders are late or never sent.</p>
+        <p class="muted">In most small firms, the owner or the bookkeeper sends reminders one by one on WhatsApp, between other work. The hard part comes after: the replies. "Can pay next week." "Two cartons were short." "Already transferred." Someone must read each one, remember it and follow up. Your accounting software can send a reminder, but it does not read the answer.</p>
       </div>
       <div class="facts">
         <div class="fact"><span class="big">64 days</span><p>Average time Malaysian SMEs wait to get paid.</p><span class="src">Experian Malaysia, Trade Bureau report, May 2025</span></div>
@@ -87,7 +88,59 @@
     </div>
   </section>
 
-  <section id="gains">
+  <section id="replies">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What happens after the reminder</span>
+        <h2>Every reply gets the correct next step</h2>
+        <p class="muted">Most customers answer a reminder. The tool reads the answer and does what your team would do. It sends the hard cases to you with the full history.</p>
+      </div>
+      <div class="replies">
+        <article class="reply">
+          <span class="rk">Promise to pay</span>
+          <div class="msg in">Can pay next Friday?</div>
+          <ul class="checks">
+            <li>Records the date against the invoice.</li>
+            <li>Stops other reminders until that date.</li>
+            <li>Sends the pay link again that morning.</li>
+            <li>Alerts you if the date passes with no payment.</li>
+          </ul>
+        </article>
+        <article class="reply">
+          <span class="rk">Dispute</span>
+          <div class="msg in">2 cartons were short on this delivery.</div>
+          <ul class="checks">
+            <li>Pauses all reminders for that invoice at once.</li>
+            <li>Thanks the customer and says that you will check.</li>
+            <li>Sends you the message, the invoice and the history.</li>
+            <li>Starts again only when you mark it as settled.</li>
+          </ul>
+        </article>
+        <article class="reply">
+          <span class="rk">Already paid</span>
+          <div class="msg in">Already transferred last Tuesday.</div>
+          <ul class="checks">
+            <li>Checks for a matching payment.</li>
+            <li>If it finds one, stops and thanks the customer.</li>
+            <li>If not, asks politely for the transfer slip.</li>
+            <li>Never says "you did not pay" without your approval.</li>
+          </ul>
+        </article>
+        <article class="reply">
+          <span class="rk">Simple request</span>
+          <div class="msg in">Can send the invoice again? Need the PO number.</div>
+          <ul class="checks">
+            <li>Sends a copy of the invoice and the PO number.</li>
+            <li>Keeps the reminder schedule running.</li>
+            <li>Asks you only if the data is not in your records.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="muted small calc-note">The tool never changes an amount, a due date or your bank details. It never agrees to a discount or a payment plan. These decisions stay with you.</p>
+    </div>
+  </section>
+
+  <section class="band" id="gains">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">What you gain</span>
@@ -119,30 +172,32 @@
     </div>
   </section>
 
-  <section class="band" id="how">
+  <section id="how">
     <div class="wrap split" style="align-items:start">
       <div class="section-head" style="margin:0">
         <span class="eyebrow">How it works</span>
-        <h2>A fixed reminder schedule, with a person for the hard cases</h2>
-        <p class="muted">You choose the tone and the schedule. The tool follows it for every open invoice. When a customer disputes an invoice or asks for a payment plan, the tool stops and passes the case to you.</p>
+        <h2>A reminder schedule that stops when the customer answers</h2>
+        <p class="muted">You choose the tone and the schedule. The tool follows it for every open invoice. A reply changes the plan: a promise moves the next reminder to the promised date, and a dispute or a request for a payment plan goes to you.</p>
       </div>
       <ol class="ladder">
         <li><span class="day">Day −3</span><div><h3>Friendly heads-up</h3><p class="muted">A short note with the amount, the due date and a pay link.</p></div></li>
         <li><span class="day">Day +1</span><div><h3>First reminder</h3><p class="muted">A polite message the day after the due date.</p></div></li>
-        <li><span class="day">Day +7</span><div><h3>Ask for a date</h3><p class="muted">The tool asks when payment will come and records the answer.</p></div></li>
+        <li><span class="day">Day +7</span><div><h3>Ask for a date</h3><p class="muted">The tool asks when payment will come, records the answer and waits for that date.</p></div></li>
         <li><span class="day">Day +14</span><div><h3>Firmer reminder</h3><p class="muted">A clear message that refers to your payment terms.</p></div></li>
-        <li><span class="day">Day +21</span><div><h3>Hand over to you</h3><p class="muted">You get a short summary of the full history, so one call is enough.</p></div></li>
+        <li><span class="day">Day +21</span><div><h3>Hand over to you</h3><p class="muted">You get a short summary of every message, promise and dispute, so one call is enough.</p></div></li>
       </ol>
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="wrap cols-2">
       <div>
         <span class="eyebrow">What is different</span>
-        <h3>It runs in your name</h3>
+        <h3>It reads replies and runs in your name</h3>
         <ul class="checks">
+          <li>It reads every reply and acts on it. A basic reminder only sends.</li>
           <li>Messages go from your own email address and WhatsApp number.</li>
+          <li>Messages can be in English, Malay or Chinese, in the tone that you choose.</li>
           <li>Customers pay you directly, into your own account.</li>
           <li>Every message says that it is an automated reminder.</li>
           <li>Messages go out on weekdays, during business hours only.</li>
@@ -161,7 +216,7 @@
     </div>
   </section>
 
-  <section class="band" id="faq">
+  <section id="faq">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Questions</span>
@@ -173,8 +228,12 @@
           <p>No. We supply software. You stay the sender of every message, and your customers pay you directly. We do not take a percentage of the money that you collect.</p>
         </details>
         <details>
+          <summary>My accounting software already sends reminders. Why use this?</summary>
+          <p>Accounting software sends a fixed email. It does not read the reply. Our tool works on WhatsApp too, and it acts on each answer: it records a promise to pay, pauses on a dispute, checks a "we already paid" message and stops when the invoice is paid. It keeps one history per invoice, so you know where each one stands.</p>
+        </details>
+        <details>
           <summary>Will it damage my customer relationships?</summary>
-          <p>You approve the wording and the schedule before anything goes out. The tone stays polite. Disputes and payment plans go to you, not to the tool.</p>
+          <p>You approve the wording and the schedule before anything goes out. The tone stays polite. When a customer raises a problem, the reminders stop for that invoice. Disputes and payment plans go to you, not to the tool.</p>
         </details>
         <details>
           <summary>How do you get my invoice data?</summary>
